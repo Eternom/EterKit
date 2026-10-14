@@ -1,0 +1,100 @@
+# ============================================================
+#  EterKit : les kits du réseau
+# ============================================================
+#
+#  Serveur, base de données, Redis, langue et couleurs se règlent dans EterLib/config.yml, communs à tous les plugins
+#  Eter. Les réclamations sont dans la base commune : un kit réclamé sur un serveur l'est partout.
+#  Toute modification nécessite un redémarrage du serveur.
+
+# Serveurs où les kits sont désactivés (début du nom, comme dans EterLib > server-name) : la prison n'a pas EterSync,
+# un kit y resterait coincé.
+disabled-servers: [prison]
+
+# Menu /kit : bouton en bas. Avec une commande (sans le /), il la lance pour le joueur et relie les menus entre eux ;
+# vide, il ramène au menu central (/menu) s'il existe, sinon il ferme.
+menu:
+  back-command: "menu progression"
+
+# Les kits, dans l'ordre du menu (7 au plus). L'identifiant (depart, joueur...) donne la permission d'accès :
+# eterkit.kit.<kit>. Nom affiché et « comment l'obtenir » : lang/ > kits.<kit>.
+#   icon             : l'objet dans le menu
+#   cooldown         : délai entre deux réclamations, « 7d », « 12h », « 1d 12h », ou « once » (une seule fois)
+#   new-players-only : réservé aux joueurs arrivés après l'installation d'EterKit, et donné de lui-même à leur arrivée
+#   items            : "MATIÈRE [quantité] [enchantement:niveau ...]", ex : "DIAMOND_PICKAXE 1 efficiency:2 unbreaking:2"
+#                      (enchantements : leur nom Minecraft, efficiency, unbreaking, fortune, lure, luck_of_the_sea...)
+# Le joueur doit avoir la place pour TOUT le kit : sinon il n'est pas donné, et le menu dit combien de cases libérer.
+# Ressources et confort : rien au-dessus du fer pour les armes et armures (aucun avantage au combat).
+kits:
+  depart:
+    icon: LEATHER_CHESTPLATE
+    cooldown: once
+    new-players-only: true
+    items:
+      - "STONE_SWORD"
+      - "STONE_PICKAXE"
+      - "STONE_AXE"
+      - "STONE_SHOVEL"
+      - "STONE_HOE"
+      - "LEATHER_HELMET"
+      - "LEATHER_CHESTPLATE"
+      - "LEATHER_LEGGINGS"
+      - "LEATHER_BOOTS"
+      - "BREAD 16"
+      - "TORCH 16"
+      - "OAK_LOG 32"
+      - "WHITE_BED"
+      - "CHEST"
+  joueur:
+    icon: STONE_PICKAXE
+    cooldown: 7d
+    items:
+      - "STONE_PICKAXE"
+      - "STONE_AXE"
+      - "COOKED_BEEF 8"
+      - "TORCH 16"
+      - "COAL 16"
+  aventurier:
+    icon: IRON_PICKAXE
+    cooldown: 7d
+    items:
+      - "IRON_PICKAXE"
+      - "IRON_AXE"
+      - "IRON_SHOVEL"
+      - "SHEARS"
+      - "COOKED_BEEF 16"
+      - "TORCH 32"
+      - "COAL 32"
+      - "OAK_LOG 32"
+      - "IRON_INGOT 8"
+  heros:
+    icon: GOLDEN_PICKAXE
+    cooldown: 7d
+    items:
+      - "IRON_PICKAXE 1 efficiency:1"
+      - "IRON_AXE 1 efficiency:1"
+      - "IRON_SHOVEL 1 efficiency:1"
+      - "IRON_HOE 1 efficiency:1"
+      - "SHEARS"
+      - "FISHING_ROD 1 lure:1"
+      - "COOKED_BEEF 32"
+      - "TORCH 64"
+      - "COAL 64"
+      - "OAK_LOG 64"
+      - "IRON_INGOT 16"
+      - "GOLD_INGOT 8"
+  legende:
+    icon: DIAMOND_PICKAXE
+    cooldown: 7d
+    items:
+      - "DIAMOND_PICKAXE 1 efficiency:2 unbreaking:2"
+      - "DIAMOND_AXE 1 efficiency:2 unbreaking:2"
+      - "DIAMOND_SHOVEL 1 efficiency:2 unbreaking:2"
+      - "DIAMOND_HOE 1 efficiency:2 unbreaking:2"
+      - "SHEARS"
+      - "FISHING_ROD 1 lure:2 luck_of_the_sea:1"
+      - "COOKED_BEEF 64"
+      - "TORCH 64"
+      - "COAL 64"
+      - "OAK_LOG 64"
+      - "IRON_INGOT 32"
+      - "GOLD_INGOT 16"

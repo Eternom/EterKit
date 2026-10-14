@@ -1,0 +1,38 @@
+name: EterKit
+version: '${version}'
+
+main: fr.eternom.eterKit.Main
+api-version: '26.2'
+load: POSTWORLD
+depend: [EterLib]
+# EterSync : aucun kit n'est donné pendant le chargement de l'inventaire
+softdepend: [EterSync]
+
+commands:
+  kit:
+    description: Ouvre le menu des kits, ou réclame un kit.
+    usage: /kit [kit]
+    aliases: [kits]
+    permission: eterkit.use
+  eterkit:
+    description: Administration des kits (donner, remettre à zéro).
+    usage: /eterkit give <joueur> <kit> | reset <joueur> [kit]
+    permission: eterkit.admin
+
+permissions:
+  eterkit.use:
+    default: true
+  # Accès à chaque kit : eterkit.kit.<kit> (ex : par un grade LuckPerms, la boutique ou le pass de saison)
+  eterkit.kit.depart:
+    default: true
+  eterkit.kit.joueur:
+    default: true
+  eterkit.kit.aventurier:
+    default: false
+  eterkit.kit.heros:
+    default: false
+  eterkit.kit.legende:
+    default: false
+  eterkit.admin:
+    description: /eterkit (donner un kit, remettre à zéro les réclamations).
+    default: op

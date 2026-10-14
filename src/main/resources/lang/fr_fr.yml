@@ -1,0 +1,67 @@
+# Messages d'EterKit, format MiniMessage : https://docs.advntr.dev/minimessage/format
+# Balises de la palette (EterLib/config.yml > language.colors) : <primary> <accent> <info> <error> <success>
+#   <info> = texte courant gris clair, <accent> = mots importants en orange.
+# Les valeurs entre <> comme <kit> sont remplies par le plugin. Pour afficher un "<", écrire \< entre 'guillemets simples'.
+# Une clé absente reprend le texte intégré au plugin : tu peux ne garder que les lignes que tu modifies.
+# Le préfixe des messages (« Core ») est commun à tous les plugins : EterLib/config.yml > language.prefix.
+# Textes communs (« Joueur inconnu », « Commande réservée aux joueurs »...) : dans EterLib/lang/, pour tous les plugins.
+
+kit:
+  claimed: "<info>Kit <accent><kit></accent> reçu !"
+  dropped: "<info>Une partie ne rentrait plus : posée à tes pieds."
+  waiting: "<error>Kit <accent><kit></accent> déjà réclamé : de nouveau dans <accent><time></accent>."
+  once: "<error>Tu as déjà reçu le kit <accent><kit></accent>."
+  locked: "<error>Tu n'as pas accès au kit <accent><kit></accent> : voir <accent>/kit</accent>."
+  no-space: "<error>Pas assez de place : libère <accent><slots></accent> case(s) de ton inventaire."
+  loading: "<error>Ton inventaire est en cours de chargement : réessaie dans un instant."
+  disabled-here: "<error>Les kits ne sont pas disponibles sur ce serveur."
+  unknown: "<error>Kit inconnu : <accent><kit></accent>."
+  starter-given: "<info>Bienvenue ! Voici ton <accent>kit de départ</accent>. D'autres kits t'attendent chaque semaine."
+  starter-no-space: "<info>Ton <accent>kit de départ</accent> t'attend : libère de la place dans ton inventaire, puis réclame-le."
+  button: "<accent><bold>[Mes kits]</bold></accent>"
+  button-hover: "<info>Ouvrir <accent>/kit"
+
+menu:
+  title: "<primary>Kits"
+  preview-title: "<primary>Kit <dark_gray>·</dark_gray> <kit>"
+  player: "<accent><player>"
+  player-lore: "<info>Un kit par semaine, sur tout le réseau."
+  disabled-here: "<error>Pas de kit sur ce serveur."
+  kit-name: "<primary>Kit <kit>"
+  status:
+    available: "<success>● <info>Disponible"
+    waiting: "<error>● <info>De nouveau dans <accent><time>"
+    claimed: "<dark_gray>● <info>Déjà reçu"
+    locked: "<error>● <info>Verrouillé"
+  every-days: "<dark_gray>▸ <info>Une fois tous les <accent><days> jours"
+  every: "<dark_gray>▸ <info>Une fois toutes les <accent><time>"
+  once: "<dark_gray>▸ <info>Une seule fois"
+  items: "<dark_gray>▸ <accent><count></accent> <info>objets"
+  claim: "<accent>Clic gauche <dark_gray>· <info>réclamer"
+  preview: "<accent>Clic droit <dark_gray>· <info>voir le contenu"
+  back-kits: "<accent>« Kits"
+
+# Nom de chaque kit (config.yml > kits) et, pour un kit verrouillé, comment l'obtenir
+kits:
+  depart:
+    name: "de départ"
+    how: "<info>Pour les nouveaux joueurs."
+  joueur:
+    name: "Joueur"
+    how: "<info>Pour tous les joueurs."
+  aventurier:
+    name: "Aventurier"
+    how: "<info>Avec le grade <accent>Aventurier</accent>, la boutique ou le pass de saison."
+  heros:
+    name: "Héros"
+    how: "<info>Avec le grade <accent>Héros</accent>, la boutique ou le pass de saison."
+  legende:
+    name: "Légende"
+    how: "<info>Avec le grade <accent>Légende</accent>, la boutique ou le pass de saison."
+
+admin:
+  usage: '<error>Utilisation : <accent>/eterkit give \<joueur> \<kit></accent> ou <accent>reset \<joueur> [kit]'
+  not-here: "<error><accent><player></accent> n'est pas connecté sur ce serveur."
+  given: "<info>Kit <accent><kit></accent> donné à <accent><player></accent>."
+  reset: "<info>Kit <accent><kit></accent> de <accent><player></accent> : réclamable de nouveau."
+  reset-all: "<info>Tous les kits de <accent><player></accent> : réclamables de nouveau."
