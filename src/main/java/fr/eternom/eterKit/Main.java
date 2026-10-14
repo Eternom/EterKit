@@ -14,7 +14,7 @@ public final class Main extends JavaPlugin {
 
     /** Préfixe des tables d'EterKit dans la base commune : eterkit_claims, eterkit_install. */
     private static final String TABLE_PREFIX = "eterkit_";
-    private static final String REQUIRED_ETERLIB = "1.13.0";
+    private static final String REQUIRED_ETERLIB = "1.15.0";
 
     private Messages messages;
     private PlayerDirectory playerDirectory;

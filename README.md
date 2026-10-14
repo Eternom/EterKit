@@ -5,7 +5,7 @@ grade), réclamés depuis le menu `/kit` sur n'importe quel serveur. Document d�
 
 ## Prérequis
 
-- **EterLib 1.13.0+** (`depend`) : base, langues et textes communs, menus (cadre, bouton Retour), annuaire des joueurs.
+- **EterLib 1.15.0+** (`depend`) : base, langues et textes communs, menus (cadre, bouton Retour), annuaire des joueurs.
 - **EterSync** (`softdepend`) : `SyncApi#isLoading`, aucun kit n'est donné pendant le chargement de l'inventaire
   (il serait écrasé). Sans EterSync sur un serveur, les kits y sont donnés tout de suite.
 - Permissions lues par l'API Bukkit (LuckPerms ou autre).
