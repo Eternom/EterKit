@@ -23,7 +23,7 @@ dependencies {
     compileOnly("io.papermc.paper:paper-api:26.2.build.+")
 
     // Socle commun : base, Redis, langue, joueurs, téléportation (plugin EterLib installé sur le serveur)
-    compileOnly("com.github.Eternom:EterLib:1.15.0")
+    compileOnly("com.github.Eternom:EterLib:1.20.1")
     // Inventaire en cours de chargement (SyncApi) : aucun kit donné avant (softdepend)
     compileOnly("com.github.Eternom:EterSync:1.2.1")
 }

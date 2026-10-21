@@ -140,7 +140,9 @@ public class KitMenu implements Menu {
         return Items.item(icon, text("menu.kit-name", "kit", service.plainName(viewer, kit)), lore, status == Status.AVAILABLE);
     }
 
-    void reopen(Player player) {
+    /** Rouvert tel quel : depuis l'aperçu d'un kit, et par le bouton Retour d'EterLib (Menu#reopen, publique). */
+    @Override
+    public void reopen(Player player) {
         player.openInventory(inventory);
     }
 
