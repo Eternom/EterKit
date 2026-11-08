@@ -6,9 +6,9 @@
 #  Eter. Les réclamations sont dans la base commune : un kit réclamé sur un serveur l'est partout.
 #  Toute modification nécessite un redémarrage du serveur.
 
-# Serveurs où les kits sont désactivés (début du nom, comme dans EterLib > server-name) : la prison n'a pas EterSync,
+# Serveurs où les kits sont désactivés (début du nom, comme dans EterLib > server-name) : un serveur sans EterSync,
 # un kit y resterait coincé.
-disabled-servers: [prison]
+disabled-servers: []
 
 # Menu /kit : bouton en bas. Avec une commande (sans le /), il la lance pour le joueur et relie les menus entre eux ;
 # vide, il ramène au menu central (/menu) s'il existe, sinon il ferme.

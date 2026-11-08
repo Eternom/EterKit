@@ -27,7 +27,7 @@ grade), réclamés depuis le menu `/kit` sur n'importe quel serveur. Document d�
   d'EterLib) après l'installation (table `eterkit_install`, écrite par le premier serveur qui démarre). Donné de
   lui-même à l'arrivée, dès que l'inventaire est chargé (vérifié toutes les demi-secondes, 30 s au plus) ; s'il manque
   de place, un message avec un bouton `/kit`. Les anciens joueurs ne le voient pas.
-- **Serveurs exclus** (`disabled-servers`, début du nom) : la prison, sans EterSync.
+- **Serveurs exclus** (`disabled-servers`, début du nom ; aucun par défaut) : un serveur sans EterSync, où le kit resterait.
 - **Menu `/kit`** (`module/gui`) : cadre orange, un kit par case (7 au plus), état (disponible, temps restant, déjà
   reçu, verrouillé avec « comment l'obtenir » : `lang/ > kits.<kit>.how`) ; clic gauche réclamer, droit voir le contenu.
   Bouton du bas : `menu.back-command`.

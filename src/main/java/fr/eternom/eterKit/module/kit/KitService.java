@@ -25,7 +25,7 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 /**
- * Réclamer un kit, partout sur le réseau sauf sur les serveurs exclus (prison) : là où le joueur se trouve, dans son
+ * Réclamer un kit, partout sur le réseau sauf sur les serveurs exclus (disabled-servers) : là où le joueur se trouve, dans son
  * inventaire. Jamais pendant le chargement de l'inventaire par EterSync (il serait écrasé), jamais s'il manque de
  * place (le kit n'est pas consommé, le joueur sait combien de cases libérer).
  *
